@@ -20,6 +20,10 @@ const Counter = (props) => {
     };
   });
 
+  const restart = () => {
+    setCount((prev) => init);
+  };
+
   return (
     <>
       Initital valaue of the counter is: {init}
@@ -27,7 +31,11 @@ const Counter = (props) => {
       The counter is set to: {count}
       <br />
       {end && count >= end ? (
-        <b>Counter stopped</b>
+        <>
+          <b>Counter stopped</b>
+          <br />
+          <button onClick={restart}>Start</button>
+        </>
       ) : (
         <i>Counter in progress</i>
       )}
