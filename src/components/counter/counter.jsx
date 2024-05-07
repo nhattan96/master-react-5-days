@@ -12,7 +12,6 @@ const Counter = (props) => {
     let timer = setInterval(() => {
       setCount((prev) => prev + 1);
 
-      console.log("count =", count);
     }, 1000);
 
     return () => {
