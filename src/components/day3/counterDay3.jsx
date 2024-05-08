@@ -1,21 +1,34 @@
-import { useState, useEffect } from "react";
+import { useContext, useState } from "react";
+import { TotalDay3Context } from "../../App";
 
-const CounterDay3 = () => {
+// import { useEffect } from "react";
+
+const CounterDay3 = (props) => {
   const [count, setCount] = useState(0);
 
-  const onClickIncr = () => setCount((prev) => prev + 1);
+  //useContext
+  const [totalDay3ctx, setTotalDay3ctx] = useContext(TotalDay3Context);
 
-  useEffect(() => {
+  const onClickIncr = () => {
+    setCount((prev) => prev + 1);
 
-    return () => {
-    setCount((count) => count + 1);
+    // Pass function
+    // props.setTotalDay3((total) => total + 1);
 
-    };
-  }, []);
+    // Use useContext
+    setTotalDay3ctx((total) => total + 1);
+  };
+  // useEffect(() => {
+  //    setCount((count) => count + 1);
+
+  //   return () => {
+
+  //   };
+  // }, []); // [] <-- Empty array mean call 1 time
 
   return (
     <>
-      <button onClick={() => onClickIncr}>Value + 1</button>
+      <button onClick={onClickIncr}>Value + 1</button>
       <br />
       <b>Value : {count}</b>
     </>
