@@ -35,11 +35,11 @@ function App() {
         {/* Know how to use useState, pass data from child to parent */}
         <b>Counter 1</b>
         <br />
-        <CounterDay3 id="1" setTotalDay3={setTotalDay3}></CounterDay3>
+        {/* <CounterDay3 id="1" setTotalDay3={setTotalDay3}></CounterDay3> */}
         <hr />
         <b>Counter 2</b>
         <br />
-        <CounterDay3 id="2" setTotalDay3={setTotalDay3}></CounterDay3>
+        {/* <CounterDay3 id="2" setTotalDay3={setTotalDay3}></CounterDay3> */}
         <br />
         <br />
         <b>Total value = {totalDay3}</b>
@@ -48,7 +48,7 @@ function App() {
         {/* Use createdContext and useContext to pass data to all child */}
         <b>Counter 3</b>
         <br />
-        <CounterDay3 id="1" setTotalDay3={setTotalDay3}></CounterDay3>
+        {/* <CounterDay3 id="1" setTotalDay3={setTotalDay3}></CounterDay3> */}
         <hr />
         <b>Counter 4</b>
         <br />
