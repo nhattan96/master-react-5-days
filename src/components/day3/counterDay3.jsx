@@ -54,6 +54,7 @@ const CounterDay3 = (props) => {
     };
   }, [countRef.current]);
 
+  
   return (
     <>
       <button onClick={onClickIncr}>Value + 1</button>
