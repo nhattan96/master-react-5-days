@@ -4,6 +4,7 @@ import Counter from "./components/counter/counter";
 import CounterClick from "./components/counter/counterClick";
 import CounterInput from "./components/counter/counterInput";
 import CounterDay3 from "./components/day3/counterDay3";
+import UseAppReducerApp from "./components/day3/useReducer/useReducerApp";
 
 const TotalDay3Context = createContext();
 
@@ -19,15 +20,15 @@ function App() {
     <TotalDay3Context.Provider value={[totalDay3, setTotalDay3]}>
       <div className="App">
         {/* Know how to use useEffect */}
-        <Counter init="0" end="5"></Counter> <br />
+        {/* <Counter init="0" end="5"></Counter> <br /> */}
         <br />
         {/* Know how to use useRef */}
         <CounterClick init="0" end="5"></CounterClick>
         <br />
         {/* Know how to pass param from child to parent */}
-        <CounterInput focus type="number" setTotal={setTotal}></CounterInput>
+        {/* <CounterInput focus type="number" setTotal={setTotal}></CounterInput>
         <CounterInput type="number" setTotal={setTotal}></CounterInput>
-        <CounterInput type="number" setTotal={setTotal}></CounterInput>
+        <CounterInput type="number" setTotal={setTotal}></CounterInput> */}
         <br />
         <b>Total : {total}</b>
         <br />
@@ -52,10 +53,13 @@ function App() {
         <hr />
         <b>Counter 4</b>
         <br />
-        <CounterDay3 id="2" setTotalDay3={setTotalDay3}></CounterDay3>
+        {/* <CounterDay3 id="2" setTotalDay3={setTotalDay3}></CounterDay3> */}
         <br />
         <br />
-        <b>Total value = {totalDay3}</b>
+        {/* <b>Total value = {totalDay3}</b> */}
+
+        {/* Use useReducer */}
+        <UseAppReducerApp></UseAppReducerApp>
       </div>
     </TotalDay3Context.Provider>
   );
