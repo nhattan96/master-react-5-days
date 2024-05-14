@@ -15,7 +15,7 @@ const CounterUseReducer = () => {
       // if (action.type === "DECR") state.value -= 1;
 
       if (action.type === "INCR") state.value += action.value;
-      if (action.type === "DECR") state.value -= action.value;
+      if (action.type === "DECR") state.value -= action.value;  
 
       return { ...state };
       // return state DO NOT USE THIS
