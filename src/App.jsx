@@ -7,6 +7,7 @@ import CounterDay3 from "./components/day3/counterDay3";
 import UseAppReducerApp from "./components/day4/useReducer/useReducerApp";
 import UseCustomHookApp from "./components/day4/useCustomHook/useCounterMax/useCounterMaxApp";
 import UseForceUpdatedApp from "./components/day4/useCustomHook/useForceUpdated/useForceUpdatedApp";
+import UsePreviousStateApp from "./components/day4/useCustomHook/usePreviousState/usePreviousStateApp";
 
 const TotalDay3Context = createContext();
 
@@ -67,6 +68,8 @@ function App() {
         <UseCustomHookApp></UseCustomHookApp>
 
         <UseForceUpdatedApp></UseForceUpdatedApp>
+
+        <UsePreviousStateApp></UsePreviousStateApp>
       </div>
     </TotalDay3Context.Provider>
   );
