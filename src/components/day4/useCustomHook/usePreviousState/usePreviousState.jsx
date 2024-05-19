@@ -1,8 +1,6 @@
 import { useRef } from "react";
 
 const usePreviousState = (state) => {
-  debugger;
-
   const ref = useRef();
 
   if (state === ref.current) return state.slice(0, -1);
