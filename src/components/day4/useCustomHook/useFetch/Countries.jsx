@@ -1,9 +1,9 @@
 import useCountries from "./useCountries";
 
-function Countries() {
+function Countries({name}) {
   // const [data, error] = useFetch("https://restcountries.com/v3.1/all");
 
-  const countries = useCountries();
+  const countries = useCountries(name);
 
   return (
     <>
@@ -15,9 +15,14 @@ function Countries() {
         <b>{data.slice(0,100)}</b>
       )} */}
       <ul>
-        {countries.map((name, index) => (
-          <li key={index}>{name}</li>
-        ))}
+        {
+          !countries ? <p>Waiting</p> : (
+            countries.map((name, index) => (
+              <li key={index}>{name}</li>
+            ))
+          )
+        }
+        
       </ul>
     </>
   );
