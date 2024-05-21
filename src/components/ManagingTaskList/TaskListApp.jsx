@@ -13,7 +13,7 @@ const TaskList = () => {
   return (
     <>
       <button onClick={onAddItem}>Add Item</button>
-      <Items items={items}></Items>
+      <Items items={items} setItems={setItems}></Items>
     </>
   );
 };

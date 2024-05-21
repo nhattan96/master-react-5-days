@@ -5,7 +5,7 @@ const Items = (props) => {
     <>
       <ul>
         {props.items.map((item, index) => (
-          <Item key={index} name={item}></Item>
+          <Item index={index} name={item} setItems={props.setItems}></Item>
         ))}
       </ul>
     </>
