@@ -9,6 +9,7 @@ import UseCustomHookApp from "./components/day4/useCustomHook/useCounterMax/useC
 import UseForceUpdatedApp from "./components/day4/useCustomHook/useForceUpdated/useForceUpdatedApp";
 import UsePreviousStateApp from "./components/day4/useCustomHook/usePreviousState/usePreviousStateApp";
 import UseFetchApp from "./components/day4/useCustomHook/useFetch/useFetchApp";
+import TaskList from "./components/ManagingTaskList/TaskListApp";
 
 const TotalDay3Context = createContext();
 
@@ -22,6 +23,8 @@ function App() {
 
   return (
     <TotalDay3Context.Provider value={[totalDay3, setTotalDay3]}>
+      <TaskList></TaskList>
+
       <div className="App">
         {/* Know how to use useEffect */}
         {/* <Counter init="0" end="5"></Counter> <br /> */}
