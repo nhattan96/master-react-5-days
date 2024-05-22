@@ -1,5 +1,5 @@
 const Item = (props) => {
-  const onRemove = () => {Í
+  const onRemove = () => {
     props.setItems((items) => {
       items = items.filter((item, index) => {
         if (index == props.index) return false;
@@ -16,6 +16,7 @@ const Item = (props) => {
       <button onClick={onRemove}>Remove</button>
     </li>
   );
+  
 };
 
 export default Item;
