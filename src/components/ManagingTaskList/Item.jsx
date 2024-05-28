@@ -30,7 +30,15 @@ const Item = ({ name, index, setItems }) => {
     setModifyOn((prev) => !prev);
 
     setItems((prev) => {
-      prev[index] = event.target.value;
+      console.log(prev, "as");
+      console.log(index);
+
+      prev = prev.map((item) => {
+        if (index == item.key) {
+          item.name = event.target.value;
+          return item
+        }
+      });
       return [...prev];
     });
   };

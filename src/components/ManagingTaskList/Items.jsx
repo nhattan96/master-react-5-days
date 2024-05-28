@@ -1,19 +1,19 @@
 import Item from "./Item";
 
-const Items = (props) => {
-  console.log(props.items, "items");
+const Items = ({items, setItems}) => {
+  console.log(items, "items");
   return (
     <>
       <ul>
-        {props.items.map((item, index) => {
-          const { name, key } = props.items;
+        {items.map((item, index) => {
+          const { name, key } = item;
 
           return (
             <Item
               index={key}
               key={key}
               name={name}
-              setItems={props.setItems}
+              setItems={setItems}
             ></Item>
           );
         })}
