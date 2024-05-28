@@ -1,13 +1,22 @@
 import Item from "./Item";
 
 const Items = (props) => {
-  console.log(props.items,'items')
+  console.log(props.items, "items");
   return (
     <>
       <ul>
-        {props.items.map((item, index) => (
-          <Item key={index} index={index} name={item} setItems={props.setItems}></Item>
-        ))}
+        {props.items.map((item, index) => {
+          const { name, key } = props.items;
+
+          return (
+            <Item
+              index={key}
+              key={key}
+              name={name}
+              setItems={props.setItems}
+            ></Item>
+          );
+        })}
       </ul>
     </>
   );

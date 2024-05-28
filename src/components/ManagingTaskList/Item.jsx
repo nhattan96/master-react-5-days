@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const Item = (props) => {
+const Item = ({ name, index, setItems }) => {
   const [modifyOn, setModifyOn] = useState(false);
-  const [text, setText] = useState(props.name);
+  const [text, setText] = useState(name);
 
   const onRemove = () => {
-    props.setItems((items) => {
+    setItems((items) => {
       items = items.filter((item, index) => {
-        if (index == props.index) return false;
+        if (item.key == index) return false;
         else return true;
       });
       return [...items];
@@ -29,8 +29,8 @@ const Item = (props) => {
 
     setModifyOn((prev) => !prev);
 
-    props.setItems((prev) => {
-      prev[props.index] = event.target.value;
+    setItems((prev) => {
+      prev[index] = event.target.value;
       return [...prev];
     });
   };

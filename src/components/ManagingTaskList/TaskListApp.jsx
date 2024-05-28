@@ -3,10 +3,12 @@ import Items from "./Items";
 
 const TaskList = () => {
   const [items, setItems] = useState([]);
+  const [key, setKey] = useState(1);
 
   const onAddItem = () => {
-    let item = "Item " + (items.length + 1);
-    items.push(item);
+    const name = "Item " + key;
+    setKey(key + 1)
+    items.push({name, key});
     setItems((prev) => [...items]);
   };
 
